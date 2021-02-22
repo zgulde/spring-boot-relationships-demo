@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h1, h2, h3 {
+    margin: 1em 0;
+}
+
+.phone {
+    border: 1px solid black;
+    padding: 1em 3em;
+    width: 45%;
+    margin: 1em 0;
+}
+

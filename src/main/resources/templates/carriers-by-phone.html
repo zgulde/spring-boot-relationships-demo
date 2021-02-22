@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Carriers By Phone</h1>
+
+    <div class="flex">
+        <div class="phone" th:each="phone : ${phones}">
+            <h2 th:text="${phone.manufacturer.name} + ' ' + ${phone.model}" />
+            <p>Available on:</p>
+            <ul style="margin-top: 1em;">
+                <li th:each="carrier : ${phone.carriers}" th:text="${carrier.name}" />
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+</html>

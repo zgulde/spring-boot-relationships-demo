@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Application</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Viewing phones for <span th:text="${company.name}" /></h1>
+
+    <div class="flex">
+        <div th:each="phone : ${company.phones}" class="phone">
+            <h2 th:text="${phone.manufacturer.name} + ' ' + ${phone.model}" />
+            <p>Price: $<span th:text="${phone.price}" /></p>
+        </div>
+    </div>
+
+</body>
+</html>
